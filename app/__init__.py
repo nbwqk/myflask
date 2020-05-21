@@ -32,9 +32,9 @@ def create_app(config_name):
     from .auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint,url_prefix='/auth')
 
-    @app.route('/secret')
-    @login_required
-    def secret():
-        return 'Only authenticated users are allowed!'
-    
     return app
+
+    #@app.route('/secret')
+    #@login_required
+    #def secret():
+    #   return 'Only authenticated users are allowed!'
